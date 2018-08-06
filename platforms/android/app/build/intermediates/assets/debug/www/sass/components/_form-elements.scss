@@ -27,6 +27,7 @@
 
   &:not(select) {
     -webkit-appearance: none !important;
+    border-color: darken($bright-default, 15%);
   }
 
   @include placeholder {
