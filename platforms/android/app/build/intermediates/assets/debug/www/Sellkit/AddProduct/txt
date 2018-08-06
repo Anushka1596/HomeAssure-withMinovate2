@@ -1,0 +1,4 @@
+var services = {
+  "login": {"endpoint":"//apis.zopper.com/v1/login", "parameters": ["username", "password"], "method":"POST"},
+  "
+}

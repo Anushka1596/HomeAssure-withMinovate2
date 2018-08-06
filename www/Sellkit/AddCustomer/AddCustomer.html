@@ -1,0 +1,86 @@
+<ion-view view-title="Add Customer" name="profile-view">
+  <ion-header>
+    <ion-header-bar class="bar-calm" align-title="center">
+      <h1 class="title">Add Customer</h1>
+    </ion-header-bar>
+    <ion-tabs class="tabs-stipped tabs-top tabs-dark">
+      <ion-tab class="tab-item-active" title="Add Customer>>">
+      </ion-tab>
+      <ion-tab title="Add Product>>">
+      </ion-tab>
+      <ion-tab title="Kit Details>>">
+      </ion-tab>
+      <ion-tab title="Payments">
+      </ion-tab>
+    </ion-tabs>
+  </ion-header>
+  <ion-content class="has-header padding has-subheader has-footer has-subfooter">
+    <form>
+      <ion-list>
+        <ion-item>
+          <label>
+
+          </label>
+          <label class="item input-item">
+            <stong>Customer Name :</stong>
+            <input type="text" data-ng-model="customer.cust_name" placeholder="Enter Customer Name ..">
+          </label>
+        </ion-item>
+        <ion-item>
+          <label>
+            Contact :
+          </label>
+          <input type="number" ng-model="customer.cust_contact" placeholder="Enter Contact ..">
+        </ion-item>
+        <ion-item>
+          <label>
+            State :
+          </label>
+          <select ng-model="customer.cust_state">
+            <option>Blue</option>
+            <option selected>Green</option>
+            <option>Red</option>
+          </select>
+        </ion-item>
+
+        <ion-item>
+          <label>
+            City :
+          </label>
+          <select ng-model="customer.cust_city">
+            <option>Blue</option>
+            <option selected>Green</option>
+            <option>Red</option>
+          </select>
+        </ion-item>
+        <ion-item>
+          <label>
+            Address :
+          </label>
+          <input type="text" ng-model="customer.cust_address" placeholder="Enter Address ..">
+
+        </ion-item>
+        <ion-item>
+          <label>
+            PIN :
+          </label>
+          <input type="text" ng-model="customer.cust_pin" placeholder="Enter PIN ..">
+
+        </ion-item>
+
+        <div class="row">
+          <div class="col col-50">
+            <button class="button btn-calm" ng-click="reset()">Reset</button>
+          </div>
+          <div class="col col-50">
+            <button class="button btn-calm" ng-click="saveCustomer()">Save and Proceed</button>
+          </div>
+        </div>
+
+
+      </ion-list>
+    </form>
+
+
+  </ion-content>
+</ion-view>

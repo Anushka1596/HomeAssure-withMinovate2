@@ -1,0 +1,75 @@
+/* Empty. Add your own CSS if you like */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 10px 12px 0;
+}
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+span.psw {
+  display: block;
+  float: none;
+}
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.md-fixed .mbsc-scv-item {
+  height: 80px;
+  margin: 0 10px;
+}
+.card-container {
+  position: relative;
+  padding:8px;
+
+}
+  .card {
+    min-height: 110px;
+    margin-bottom: 10px;
+    position: relative;
+    padding:4px;
+    width: 100%;
+    z-index: 9;
+  }
+  .wide-as-needed {
+    overflow: scroll;
+  white-space: nowrap;
+  }
+  .scroll { 
+    min-width: 100%;
+  }
+  .float-button {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    
+    padding: 25px;
+    font-size: 40px;
+    background:red;
+    background-color:red !important;
+    color: #ffffff !important;
+    position: fixed;
+    bottom: 20px; /* Adjust to where you want it */
+    right: 20px; /* Adjust to where you want it */
+    z-index: 9999;
+  }
+  .float-button .height_fix {
+    margin-top: 50%;
+  }
+  .float-button.content {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    margin-top: -20px; /* Note, this must be half the font size */
+    color:light;
+  } 
+  span div {
+    background-color:#DEF5FF;
+    margin: 1%;
+}

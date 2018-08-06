@@ -1,0 +1,59 @@
+<ion-view view-title="Sold Kits" name="Sold-Kits">
+  <ion-header-bar class="bar-calm" align-title="center">
+    <h1 class="title">Sold Kits</h1>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <span class="row">
+      <div class="col">Sort Date
+        <label class="item item-input item-select">
+          <div class="input-label"></div>
+          <select>
+            <option>Latest first</option>
+            <option>Oldest first</option>
+            <option>Status</option>
+          </select>
+        </label>
+      </div>
+      <div class="col">Duration month
+        <label class="item item-input item-select">
+          <div class="input-label"></div>
+          <select>
+            <option>Total</option>
+            <option>Month</option>
+            <option>Day</option>
+          </select>
+        </label>
+      </div>
+      <div class="col">
+        <lable class="item item-input">
+          <i class="icon ion-search placeholder-icon">
+            <input type="search" placeholder="Text" />
+          </i>
+        </lable>
+      </div>
+      <div class="col">Filter
+        <label class="item item-input item-select">
+          <div class="input-label"></div>
+          <select>
+            <option>Customer name</option>
+            <option>Contact</option>
+            <option>Kit Serial Number</option>
+          </select>
+        </label>
+      </div>
+    </span>
+    <span class="row" ng-click="getdetail()">
+      <div class="col col-20">
+        Products
+        <br/> Date
+      </div>
+      <div class="col col-70">
+        Customer Name:
+        <br/> Contact:
+        <i class="fa fa-angle-right" style="font-size:36px; float:right"></i>
+        <br/> Address:
+        <br/> Kit Serial No.: Status:
+      </div>
+    </span>
+  </ion-content>
+</ion-view>

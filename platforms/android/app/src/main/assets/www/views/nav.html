@@ -1,0 +1,71 @@
+<div id="sidebar-wrap" ng-controller="NavCtrl">
+  <uib-accordion close-others="oneAtTime" slimscroll="{height: '100%'}">
+
+    <uib-accordion-group is-open="status.isFirstOpen">
+      <uib-accordion-heading>
+        Service Dashboard
+        <i class="pull-right fa" ng-class="{'fa-angle-up': status.isFirstOpen, 'fa-angle-down': !status.isFirstOpen}"></i>
+      </uib-accordion-heading>
+      <ul id="navigation" nav-collapse ripple>
+        <li ui-sref-active="active">
+          <a ui-sref="app.svcDashboard">
+            <i class="fa fa-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.executivePerformance">
+            <fa name="dashboard"></fa>
+            <span>Executive Performance</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.soldKit">
+            <fa name="fa fa-pencil"></fa>
+            <span>Sold Kit</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.transaction">
+            <fa name="fa fa-list"></fa>
+            <span>Transaction</span>
+          </a>
+        </li>
+      </ul>
+    </uib-accordion-group>
+
+    <uib-accordion-group is-open="status.isSecondOpen" ng-hide="true">
+      <uib-accordion-heading>
+        Surveyor Dashboard
+        <i class="pull-right fa" ng-class="{'fa-angle-up': status.isSecondOpen, 'fa-angle-down': !status.isSecondOpen}"></i>
+      </uib-accordion-heading>
+      <ul id="navigation" nav-collapse ripple>
+        <li ui-sref-active="active">
+          <a ui-sref="app.surveyorDashboard">
+            <i class="fa fa-home"></i>
+            <span>Home</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.surveryorExecutive">
+            <fa name="dashboard"></fa>
+            <span>Executive Performance</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.surveyorPendingPageRequest">
+            <fa name="fa fa-pencil"></fa>
+            <span>Page Pending Request</span>
+          </a>
+        </li>
+        <li ui-sref-active="active">
+          <a ui-sref="app.surveyorVerifiedWarranty">
+            <fa name="fa fa-list"></fa>
+            <span>Verified Warranty</span>
+          </a>
+        </li>
+      </ul>
+    </uib-accordion-group>
+
+  </uib-accordion>
+</div>

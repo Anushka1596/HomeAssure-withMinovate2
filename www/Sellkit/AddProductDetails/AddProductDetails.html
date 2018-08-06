@@ -1,0 +1,132 @@
+<ion-view view-title="Add Customer" name="profile-view">
+  <ion-header>
+    <ion-header-bar class="bar-calm" align-title="center">
+      <button class="button btn-calm" align="right" ng-click="backToList()()">
+        << </button>
+          <h1 class="title">Add New Product</h1>
+    </ion-header-bar>
+
+    <ion-tabs class="tabs-stipped tabs-top tabs-dark">
+      <ion-tab title="Add Customer>>">
+
+      </ion-tab>
+      <ion-tab title="Add Product>>">
+
+      </ion-tab>
+      <ion-tab title="Kit Details>>">
+
+      </ion-tab>
+      <ion-tab title="Payments">
+
+      </ion-tab>
+    </ion-tabs>
+  </ion-header>
+
+  </ion-header-bar>
+  <ion-content class="has-header padding has-subheader has-footer">
+    <form>
+      <ion-list>
+        <ion-item>
+          <label>
+            Product Category :
+          </label>
+          <select ng-model="product.category">
+            <option>Blue</option>
+            <option selected>Green</option>
+            <option>Red</option>
+          </select>
+        </ion-item>
+        <ion-item>
+          <div class="col col-30">
+            <label>Invoice Available :</label>
+          </div>
+          <div class="col col-70">
+            <ion-checkbox disabled="true" value="Yes" name="group1">Yes</ion-checkbox>
+            <ion-checkbox disabled="true" value="No" name="group1">No</ion-checkbox>
+          </div>
+
+        </ion-item>
+        <ion-item>
+          <div class="row">
+            <div class="col col-30">
+              <label>Brand Name :</label>
+            </div>
+            <div class="col col-30">
+              <select ng-model="product.brandName">
+                <option>Blue</option>
+                <option selected>Green</option>
+                <option>Red</option>
+              </select>
+
+            </div>
+        </ion-item>
+        <div class="col col-20">
+          <input type="text" ng-model="product.brandOthers" placeholder="Others" />
+        </div>
+        <div class="col col-20">
+          <input type="text" ng-model="product.brandText" placeholder="Text" />
+        </div>
+        </div>
+        </ion-item>
+
+        <ion-item>
+          <div class="row">
+            <div class="col col-30">
+              <label>Model Name :</label>
+            </div>
+            <div class="col col-30">
+              <select ng-model="product.model">
+                <option>Blue</option>
+                <option selected>Green</option>
+                <option>Red</option>
+              </select>
+
+            </div>
+            <div class="col col-20">
+              <input type="text" ng-model="product.modelOthers" placeholder="Others" />
+            </div>
+            <div class="col col-20">
+              <input type="text" ng-model="product.modelText" placeholder="Text" />
+            </div>
+          </div>
+        </ion-item>
+        <ion-item>
+          <label>
+            Purchase Date :
+          </label>
+          <input type="text" ng-model="product.purchaseDate" placeholder="Enter Customer Name ..">
+        </ion-item>
+        <ion-item>
+          <label>
+            Serial No :
+          </label>
+          <input type="text" ng-model="product.serialno" placeholder="Enter Serial No ..">
+
+        </ion-item>
+        <ion-item>
+          <label>
+            Price :
+          </label>
+          <input type="text" ng-model="product.price" placeholder="Enter Price ..">
+
+        </ion-item>
+        <ion-item align="center">
+
+          <label>
+            <strong>Image </strong>
+          </label>
+
+        </ion-item>
+      </ion-list>
+    </form>
+    <div class="row">
+
+      <div class="col col-60">
+        <button class="button btn-calm" align="right" ng-click="reset()">Reset</button>
+      </div>
+      <div class="col col-60">
+        <button class="button btn-calm" align="left" ng-click="productAdded()">Add</button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

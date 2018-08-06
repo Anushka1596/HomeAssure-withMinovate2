@@ -1,0 +1,60 @@
+<ion-view view-title="Add Customer" name="profile-view">
+  <ion-header></ion-header>
+  <ion-header-bar class="bar-calm" align-title="center">
+    <button class="button btn-calm" align="right" ng-click="backtoProduct()">
+      << </button>
+        <h1 class="title">Enter Kit Detail</h1>
+  </ion-header-bar>
+  <ion-tabs class="tabs-stipped tabs-top tabs-dark">
+    <ion-tab title="Add Customer>>">
+    </ion-tab>
+    <ion-tab title="Add Product>>">
+    </ion-tab>
+    <ion-tab class="tab-item-active" title="Kit Details>>">
+    </ion-tab>
+    <ion-tab title="Payments">
+    </ion-tab>
+  </ion-tabs>
+  </ion-header>
+  <ion-content class="has-header padding has-subheader has-footer has-subfooter">
+    <form>
+      <ion-list>
+        <ion-item>
+          <label>
+            Mobile Number :
+          </label>
+          <input type="number" data-ng-model="customer.contact" placeholder="Enter Contact ..">
+        </ion-item>
+
+        <div class="row">
+          <div class="col col-100" align="right">
+            <label>Send OTP</label>
+          </div>
+        </div>
+
+        <ion-item>
+          <label>
+            OTP :
+          </label>
+          <input type="number" data-ng-model="kitDetails.OTP" placeholder="Enter OTP ..">
+        </ion-item>
+        <ion-item>
+          <label>
+            Activation Code :
+          </label>
+          <input type="number" ng-model="kitDetails.activationCode" placeholder="Enter OTP ..">
+        </ion-item>
+
+        <div class="row">
+          <div class="col col-50">
+            <button class="button btn-calm" ng-click="reset()">Reset</button>
+          </div>
+          <div class="col col-50">
+            <button class="button btn-calm" ng-click="gotopayments()">Save and Proceed</button>
+          </div>
+        </div>
+
+      </ion-list>
+    </form>
+  </ion-content>
+</ion-view>

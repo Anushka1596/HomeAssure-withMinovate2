@@ -1,0 +1,40 @@
+<ion-view view-title="My Profile" name="profile-view">
+  <ion-header-bar class="bar-calm">
+    <h1 class="title" align="center">My Profile</h1>
+  </ion-header-bar>
+  <ion-content>
+    <div padding="10px">
+      <ion-list list-inset>
+        <ion-item>
+          <ion-icon name="heart" item-start></ion-icon>
+          Name :
+          <span>{{}}</span>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="call" item-start></ion-icon>
+          Contact :
+          <span>{{}}</span>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="leaf" item-start></ion-icon>
+          Email ID :
+          <span>{{}}</span>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="leaf" item-start></ion-icon>
+          Service Center Name :
+          <span>{{}}</span>
+
+        </ion-item>
+        <ion-item>
+          <ion-icon name="leaf" item-start></ion-icon>
+          Address :
+          <span>{{}}</span>
+        </ion-item>
+        <ion-item align="center" padding="20px">
+          <button class="button button-positive" ng-click="logout()">Logout</button>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

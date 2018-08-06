@@ -1,0 +1,67 @@
+<ion-view view-title="Payment" name="profile-view">
+  <ion-header>
+    <ion-header-bar class="bar-calm" align-title="center">
+      <button class="button btn-calm" align="right" ng-click="backtokit()">
+        << </button>
+          <h1 class="title">Payment</h1>
+    </ion-header-bar>
+    <ion-tabs class="tabs-stipped tabs-top tabs-dark">
+      <ion-tab title="Add Customer>>">
+      </ion-tab>
+      <ion-tab title="Add Product>>">
+      </ion-tab>
+      <ion-tab title="Kit Details>>">
+      </ion-tab>
+      <ion-tab class="tab-item-active" title="Payments">
+      </ion-tab>
+    </ion-tabs>
+  </ion-header>
+  <ion-content class="has-header padding has-subheader has-footer has-subfooter">
+    <form>
+      <ion-list>
+        <ion-item>
+          <label>
+            Payment Method :
+          </label>
+          <select ng-model="paymentDetail.pay_method">
+            <option>Cash</option>
+            <option selected>Debit Card</option>
+            <option>Credit Card</option>
+          </select>
+        </ion-item>
+        <ion-item>
+          <label>
+            Amount :
+          </label>
+          <input type="number" data-ng-model="paymentDetail.pay_amount" placeholder="Enter Amount ..">
+        </ion-item>
+        <ion-item>
+          <label>
+            Comment :
+          </label>
+          <input type="text" ng-model="paymentDetail.pay_comment" placeholder="Enter Comment ..">
+        </ion-item>
+        <ion-item>
+          <div class="row">
+            <div class="col col-100" align="center">
+              <label>Image(optional)</label>
+              <span>
+                <ion-icon name="happy"></ion-icon>
+              </span>
+            </div>
+          </div>
+        </ion-item>
+
+        <div class="row">
+          <div class="col col-50">
+            <button class="button btn-calm" ng-click="reset()">Reset</button>
+          </div>
+          <div class="col col-50">
+            <button class="button btn-calm" ng-click="submit()">Submit</button>
+          </div>
+        </div>
+
+      </ion-list>
+    </form>
+  </ion-content>
+</ion-view>

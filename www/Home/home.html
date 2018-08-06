@@ -1,0 +1,91 @@
+<ion-view view-title="Home" name="home-view">
+  <ion-header>
+    <ion-header-bar class="bar-calm" align-title="center">
+      <h1 class="title">
+        <strong>Sale Summary</strong>
+      </h1>
+    </ion-header-bar>
+
+    <div>
+      <ion-toolbar>
+        <ion-tabs class="tabs-stipped tabs-top tabs-light">
+          <ion-tab title="Day"></ion-tab>
+          <ion-tab title="Month"></ion-tab>
+          <ion-tab title="6 Month"></ion-tab>
+          <ion-tab title="Total"> </ion-tab>
+          <ion-tab title="Custom"></ion-tab>
+        </ion-tabs>
+      </ion-toolbar>
+    </div>
+
+  </ion-header>
+  <ion-content class="padding has-header has-subheader has-footer">
+
+    <ion-scroll direction="x" class="wide-as-needed">
+      <div class="row container">
+        <div class="card-container ">
+          <div class="card front bg-lightred">
+            <p align="center">12</p>
+            <span>Kits Activated Quantity</span>
+          </div>
+        </div>
+        <div class="card-container ">
+          <div class="card front bg-green">
+            <p align="center">12</p>
+            <span>Kits Activated Quantity</span>
+          </div>
+        </div>
+        <div class="card-container ">
+          <div class="card front bg-blue">
+            <p align="center">12</p>
+            <span>Kits Activated Quantity</span>
+          </div>
+        </div>
+        <div class="card-container ">
+          <div class="card front bg-orange">
+            <p align="center">12</p>
+            <span>Kits Activated Quantity</span>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card front bg-slategray">
+            <p align="center">12</p>
+            <span>Kits Activated Quantity</span>
+          </div>
+        </div>
+
+      </div>
+    </ion-scroll>
+    <div class="container">
+      <h1>%</h1>
+    </div>
+    <div class="container">
+      <div class="col-md-8">
+
+        <!-- tile -->
+        <section class="tile" fullscreen="isFullscreen01">
+
+          <!-- tile header -->
+          <div class="tile-header bg-greensea dvd dvd-btm">
+            <h1 class="custom-font">
+              <strong>Activation </strong>Value</h1>
+          </div>
+          <!-- /tile header -->
+
+          <!-- tile widget -->
+          <div class="tile-widget bg-greensea" ng-controller="StatisticsChartCtrl">
+
+            <flot dataset="dataset" options="options" height="250px"></flot>
+
+          </div>
+          <!-- /tile widget -->
+
+
+        </section>
+        <!-- /tile -->
+
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>
