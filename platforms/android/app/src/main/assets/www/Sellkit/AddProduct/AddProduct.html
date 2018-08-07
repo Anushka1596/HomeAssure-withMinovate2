@@ -5,7 +5,7 @@
         << </button>
           <h1 class="title">Add Product</h1>
     </ion-header-bar>
-    <ion-tabs class="tabs-stipped tabs-top tabs-dark">
+    <!--<ion-tabs class="tabs-stipped tabs-top tabs-dark">
       <ion-tab title="Add Customer>>">
       </ion-tab>
       <ion-tab class="tab-item-active" title="Add Product>>">
@@ -14,12 +14,50 @@
       </ion-tab>
       <ion-tab title="Payments">
       </ion-tab>
-    </ion-tabs>
+    </ion-tabs> -->
   </ion-header>
-  <ion-content class="padding has-header has-subheader has-footer">
+  <ion-content class="padding has-header has-footer">
+    <div class="pagecontent">
+      <div class="row">
+        <uib-tabset class="tab-wizard" justified="true" ng-init="steps={step1:false, step2:true, step3:false, step4:false,}">
+          <uib-tab>
+            <uib-tab-heading>
+              Add Customer
+            </uib-tab-heading>
+          </uib-tab>
+
+          <uib-tab active="steps.step2">
+
+            <uib-tab-heading>
+              Add Product
+            </uib-tab-heading>
+
+          </uib-tab>
+
+          <uib-tab ">
+
+            <uib-tab-heading>
+              Enter Kit Details
+            </uib-tab-heading>
+
+
+          </uib-tab>
+
+          <uib-tab>
+
+            <uib-tab-heading>
+              Payment
+            </uib-tab-heading>
+          </uib-tab>
+
+
+
+        </uib-tabset>
+      </div>
+    </div>
     <div>
-      <ion-list ng-repeat="product in Products " class="no-lines">
-        <div class="col col-100">
+      <ion-list ng-repeat="product in Products " class="no-lines ">
+        <div class="col col-100 ">
           <ion-item>Product Category :{{product.prod_category}} </ion-item>
           <ion-item>Brand :{{product.prod_BrandName}} </ion-item>
           <ion-item>Serial No : {{product.prod_SerialNo}} </ion-item>
@@ -28,18 +66,18 @@
       </ion-list>
 
     </div>
-    <div class="row">
-      <div class="col col-50">
-        <button class="button btn-calm" ng-click="reset()">Reset</button>
+    <div class="row ">
+      <div class="col col-50 ">
+        <button class="button btn-calm " ng-click="reset() ">Reset</button>
       </div>
-      <div class="col col-50">
-        <button class="button btn-calm" ng-click="gotokit()">Save and Proceed</button>
+      <div class="col col-50 ">
+        <button class="button btn-calm " ng-click="gotokit() ">Save and Proceed</button>
       </div>
     </div>
-    <div class="float-button">
-      <span class="height-fix">
-        <a ng-click="addProduct()" class="content">
-          <i class="ion-plus-round"></i>
+    <div class="float-button ">
+      <span class="height-fix ">
+        <a ng-click="addProduct() " class="content ">
+          <i class="ion-plus-round "></i>
         </a>
       </span>
     </div>

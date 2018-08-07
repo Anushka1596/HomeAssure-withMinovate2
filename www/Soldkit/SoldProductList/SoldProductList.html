@@ -42,18 +42,39 @@
         </label>
       </div>
     </span>
-    <span class="row" ng-click="getdetail()">
+    <span class="row" ng-click="getdetail()" ng-repeat="product in ProductList ">
       <div class="col col-20">
         Products
-        <br/> Date
+        <br/> Date : {{product.purchase_date}}
       </div>
       <div class="col col-70">
-        Customer Name:
-        <br/> Contact:
+        Customer Name: {{}}
+        <br/> Contact:{{}}
         <i class="fa fa-angle-right" style="font-size:36px; float:right"></i>
         <br/> Address:
         <br/> Kit Serial No.: Status:
       </div>
     </span>
+    <div class="tile-body" ng-controller="RowTableCtrl">
+      <table st-table="rowCollection" class="st-table table table-custom">
+        <tbody>
+          <tr ng-repeat="product in ProductList" ng-click="getProductDetail(product.invoiceID)">
+
+            <td>Purchase Date : {{product.purchase_date | date}}
+              <br/>Customer Name: {{product.customerName}}
+              <br/>Contact: {{product.contact}}
+              <br/>Address: {{product.Address}}
+              <br/>{{product.serial_number}}
+              <br/>
+            </td>
+            <td>
+              Status : {{product.status}}
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+
+    </div>
   </ion-content>
 </ion-view>

@@ -8,24 +8,33 @@
       <div style="margin-left:1%;margin-top:1%">
         Customer Name :
         <br/> Contact :
-        <i style="float:right">Total Products :</i>
+        <i style="float:right">Total Products : </i>
       </div>
     </span>
     <div>
-      <h2>Product 1</h2>
-      <br/>
-      <ion-list>
-        <ion-item>
-          <p>Product Category:</p>
-          <p>Serial Number:</p>
-          <p>Brand Number:</p>
-          <p>Product Name:</p>
-          <p>Purchase Date:</p>
-          <p>Invoice Number:</p>
-          <p>Price:</p>
-          <p>Invoice Image:</p>
-        </ion-item>
-      </ion-list>
+      <table st-table="rowCollection" class="st-table table table-custom">
+        <tbody>
+          <tr ng-repeat="product in productDetail">
+
+            <h2>Product {{product.id}}</h2>
+            <br/>
+            <ion-list>
+              <ion-item>
+                <p>Product Category: {{}}</p>
+                <p>Serial Number: {{}}</p>
+                <p>Brand Number: {{}}</p>
+                <p>Product Name: {{}}</p>
+                <p>Purchase Date: {{}}</p>
+                <p>Invoice Number: {{}}</p>
+                <p>Price: {{}}</p>
+                <p>Invoice Image: {{}}</p>
+              </ion-item>
+            </ion-list>
+          </tr>
+        </tbody>
+
+      </table>
+
     </div>
     <button class="btn btn-calm" style="margin-left:50%;margin-top:50%" ng-click="backtosold()">Back</button>
   </ion-content>
