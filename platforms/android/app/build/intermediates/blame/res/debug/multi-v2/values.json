@@ -1,10 +1,17 @@
 {
     "logs": [
         {
+<<<<<<< HEAD
             "outputFile": "/usr/local/var/www/HomeAssure-withMinovate2/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/usr/local/var/www/HomeAssure-withMinovate2/platforms/android/app/src/main/res/values/strings.xml",
+=======
+            "outputFile": "/home/abc/HomeAssure-withMinovate2/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/home/abc/HomeAssure-withMinovate2/platforms/android/app/src/main/res/values/strings.xml",
+>>>>>>> origin/Aditi
                     "from": {
                         "startLines": "4,2,3",
                         "startColumns": "4,4,4",

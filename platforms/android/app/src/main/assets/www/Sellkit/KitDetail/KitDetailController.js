@@ -19,16 +19,17 @@ app.controller('KitDetailCtrl', ['$scope', '$state', '$stateParams',
 
     $scope.gotopayments = function () {
       var kitDetail = {};
-      customer.cust_contact = $scope.customer.contact;
-      kitDetail.OTP = $scope.kitDetails.OTP;
-      kitDetail.activationCode = $scope.kitDetails.activationCode
-      $scope.kitDetails = kitDetail;
+      //customer.cust_contact = $scope.customer.contact;
+      //kitDetail.OTP = $scope.kitDetails.OTP;
+      //kitDetail.activationCode = $scope.kitDetails.activationCode;
+      //$scope.kitDetails = kitDetail;
       $state.go('app.payments', { customer: customer, productList: productList, Kitdetail: $scope.kitDetails, payment: payment });
     };
+
     $scope.backtoProduct = function () {
       $state.go('app.AddProduct', { customer: customer, productList: productList, Kitdetail: $scope.kitDetails, payment: payment });
     };
     $scope.reset = function () {
       $scope.kitDetails = {};
-    }
+    };
   }]);
