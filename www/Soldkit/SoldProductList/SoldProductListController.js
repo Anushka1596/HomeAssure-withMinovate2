@@ -11,23 +11,24 @@ app.controller('SoldProductListCtrl', ['HomeAssureFactory', '$scope', '$state', 
     }
     var getproductList = function (params) {
       HomeAssureFactory.SVC_SoldKits(params).then(function onSuccess(data) {
-        $scope.ProductList = data;
-        console.log('success');
+        $scope.ProductList = data.results;
+        console.log($scope.ProductList);
       }, function onError(error) {
-        console.log('error');
-        alert(error);
+        console.log('error for soldkits');
+
       })
     };
-    var getdetail = function (invoiceID) {
-      HomeAssureFactory.SVC_SoldProductDetails(invoiceID).then(function onSuccess(data) {
-        $scope.ProductDetails = data;
-        console.log($scope.ProductDetails)
+    $scope.getProductDetail = function (invoiceID) {
+      var ID = 70303;
+      HomeAssureFactory.SVC_SoldProductDetails(ID).then(function onSuccess(data) {
+        $scope.ProductDetails = data.results;
+        console.log($scope.ProductDetails);
         $state.go('app.SoldkitProductDetails', { customer: null, productList: null, productDetails: $scope.ProductDetails, Kitdetail: null, payment: null });
       }, function onError(error) {
-        alert(error);
+
       })
 
     };
     getproductList($scope.params);
-    getdetail(70303);
+    // getdetail(70303);
   }]);

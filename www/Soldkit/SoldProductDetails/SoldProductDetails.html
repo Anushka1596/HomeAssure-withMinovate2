@@ -14,22 +14,19 @@
     <div>
       <table st-table="rowCollection" class="st-table table table-custom">
         <tbody>
-          <tr ng-repeat="product in productDetail">
+          <tr ng-repeat="row in ProductDetail">
 
-            <h2>Product {{product.id}}</h2>
-            <br/>
-            <ion-list>
-              <ion-item>
-                <p>Product Category: {{}}</p>
-                <p>Serial Number: {{}}</p>
-                <p>Brand Number: {{}}</p>
-                <p>Product Name: {{}}</p>
-                <p>Purchase Date: {{}}</p>
-                <p>Invoice Number: {{}}</p>
-                <p>Price: {{}}</p>
-                <p>Invoice Image: {{}}</p>
-              </ion-item>
-            </ion-list>
+            <h2>Product : {{row.id}}</h2>
+
+            <p>Product Category : {{row.category}}</p>
+            <p>Serial Number : {{row.serial_number}}</p>
+            <p>Brand Number : {{row.brand_name}}</p>
+            <p>Product Name : {{row.product_name}}</p>
+            <p>Purchase Date : {{row.purchase_date}}</p>
+            <p>Invoice Number : {{row.invoice_number}}</p>
+            <p>Price : {{row.product_price}}</p>
+            <p ng-repeat="img in product.item_images">Invoice Image : {{img.text}}</p>
+
           </tr>
         </tbody>
 

@@ -2,11 +2,11 @@
   <ion-header></ion-header>
   <ion-header-bar class="bar-calm" align-title="center">
     <button class="button btn-calm" align="right" ng-click="backtoProduct()">
-      </button>
-        <h1 class="title">Enter Kit Detail</h1>
+    </button>
+    <h1 class="title">Enter Kit Detail</h1>
   </ion-header-bar>
   <ion-tabs class="tabs-stipped tabs-top tabs-dark">
-      
+
     <ion-tab title="Add Customer>>">
     </ion-tab>
     <ion-tab title="Add Product>>">
@@ -18,7 +18,7 @@
   </ion-tabs>
   </ion-header>
   <ion-content class="has-header padding has-subheader has-footer has-subfooter">
-  <!--  <form>
+    <!--  <form>
       <ion-list>
         <ion-item>
           <label>
@@ -61,33 +61,34 @@
 
       <form role="form">
         <div class="form-group">
-          <label for="exampleInputMobileNo">Mobile Number</label>
-          <input type="number" class="form-control" id="exampleInputMobileNo" placeholder="Enter Mobile Number">
+          <label>Mobile Number</label>
+          <input type="number" class="form-control" placeholder="Enter Mobile Number">
         </div>
         <div class="form-group">
-          <label for="exampleInputOTP">OTP</label>
-          <input type="number" class="form-control" id="exampleInputOTP" placeholder="Enter OTP">
+          <label>OTP</label>
+          <input type="number" class="form-control" placeholder="Enter OTP">
         </div>
         <div class="form-group">
-          <label for="exampleInputACode">Activation Code</label>
-          <input type="number" class="form-control" id="exampleInput" placeholder="Enter Activation Code">
+          <label>Activation Code</label>
+          <input type="number" class="form-control" placeholder="Enter Activation Code">
         </div>
         <label class="checkbox checkbox-custom">
-          <input type="checkbox" checked disabled><i></i>
+          <input type="checkbox" checked disabled>
+          <i></i>
           Confirm
         </label>
         <div class="form-group">
-            <label class="control-label">Single</label>
-            <input ui-jq="filestyle" type="file" class="filestyle" ui-options="{
+          <label class="control-label">Single</label>
+          <input ui-jq="filestyle" type="file" class="filestyle" ui-options="{
               buttonText: 'Select file',
               iconName: 'fa fa-inbox'
             }" nv-file-select="" uploader="uploader">
-          </div>
-          </form> 
-  
-        <button type="submit" class="btn btn-rounded btn-success btn-sm" ng-click="reset()">Reset</button>
-        <button type="submit" class="btn btn-rounded btn-success btn-sm" ng-click="gotopayments()" >Save and Proceed</button>
-      
+        </div>
+      </form>
+
+      <button type="submit" class="btn btn-rounded btn-success btn-sm" ng-click="reset()">Reset</button>
+      <button type="submit" class="btn btn-rounded btn-success btn-sm" ng-click="gotopayments()">Save and Proceed</button>
+
       </form>
 
     </div>

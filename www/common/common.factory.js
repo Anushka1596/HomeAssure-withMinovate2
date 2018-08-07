@@ -22,9 +22,11 @@ app.factory('HomeAssureFactory', ['$window', '$q', '$http', '$rootScope', '$stat
           else {
             deferred.resolve(data);
           }
+          console.log('Success for login');
         }).error(function (error) {
           //var errorMSg = 'Invalid Credentials'
           deferred.reject('Invalid username or password');
+          console.log('Error for login');
         })
         return deferred.promise;
       },
@@ -34,17 +36,17 @@ app.factory('HomeAssureFactory', ['$window', '$q', '$http', '$rootScope', '$stat
       },
       SVC_SoldKits: function (params) {
         var deferred = $q.defer();
-        var promise = $http({
+        $http({
           method: 'GET',
           url: 'http://stg-assure.zopper.com/rms/home_assure/',
 
           data: params
         }).success(function (data) {
           deferred.resolve(data);
-          console.log('success');
+          console.log('success for soldkitlist');
         }).error(function (data) {
           deferred.reject(data);
-          console.log('error');
+          console.log('error for soldkitlist');
         });
         return deferred.promise;
       },
@@ -57,9 +59,10 @@ app.factory('HomeAssureFactory', ['$window', '$q', '$http', '$rootScope', '$stat
 
         }).success(function (data) {
           deferred.resolve(data);
-          console.log(data);
+          console.log('Success for productdetails');
         }).error(function (data) {
           deferred.reject();
+          console.log('Reject for productdetails');
         });
         return deferred.promise;
       },
