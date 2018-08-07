@@ -9,6 +9,7 @@ app.controller('LoginCtrl', ['HomeAssureFactory', '$scope', '$timeout', '$ionicM
     $scope.login = function () {
       HomeAssureFactory.Login($scope.data.username, $scope.data.password)
         .then(function (data) {
+          console.log(data);
           $state.go('app.home');
 
         }, function (error) {

@@ -179,12 +179,16 @@ var app = angular.module('HomeAssure', ['ionic', 'ui.router', 'ngAnimate',
         //Sold kit
         .state('app.SoldkitList', {
           url: '/soldkitList',
+          params: { customer: null, productList: null, productDetails: null, Kitdetail: null, payment: null },
+
           templateUrl: 'Soldkit/SoldProductList/SoldProductList.html',
           controller: 'SoldProductListCtrl'
         })
 
         .state('app.SoldkitProductDetails', {
           url: '/soldkitDetails',
+          params: { customer: null, productList: null, productDetails: null, Kitdetail: null, payment: null },
+
           templateUrl: 'Soldkit/SoldProductDetails/SoldProductDetails.html',
           controller: 'SoldProductDetailsCtrl'
         })
