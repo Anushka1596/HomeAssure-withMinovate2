@@ -2,28 +2,53 @@
   <ion-header>
     <ion-header-bar class="bar-calm" align-title="center">
       <button class="button btn-calm" align="right" ng-click="backToList()()">
-        << </button>
+       </button>
           <h1 class="title">Add New Product</h1>
     </ion-header-bar>
 
-    <ion-tabs class="tabs-stipped tabs-top tabs-dark">
-      <ion-tab title="Add Customer>>">
-
-      </ion-tab>
-      <ion-tab title="Add Product>>">
-
-      </ion-tab>
-      <ion-tab title="Kit Details>>">
-
-      </ion-tab>
-      <ion-tab title="Payments">
-
-      </ion-tab>
-    </ion-tabs>
+    
   </ion-header>
 
-  </ion-header-bar>
-  <ion-content class="has-header padding has-subheader has-footer">
+  
+  <ion-content class="has-header  has-footer">
+      <div class="pagecontent">
+          <div class="row">
+            <uib-tabset class="tab-wizard" justified="true" ng-init="steps={step1:false, step2:true, step3:false, step4:false,}">
+              <uib-tab active="steps.step1">
+                <uib-tab-heading>
+                  Add Customer
+                </uib-tab-heading>
+              </uib-tab>
+    
+              <uib-tab active="steps.step2" disable="step2.$invalid">
+    
+                <uib-tab-heading>
+                  Add Product
+                </uib-tab-heading>
+    
+              </uib-tab>
+    
+              <uib-tab active="steps.step3">
+    
+                <uib-tab-heading>
+                  Enter Kit Details
+                </uib-tab-heading>
+    
+    
+              </uib-tab>
+    
+              <uib-tab active="steps.step4">
+    
+                <uib-tab-heading>
+                  Payment
+                </uib-tab-heading>
+              </uib-tab>
+    
+    
+    
+            </uib-tabset>
+          </div>
+        </div>
  <!--   <form>
       <ion-list>
         <ion-item>
@@ -128,26 +153,23 @@
         <button class="button btn-calm" align="left" ng-click="productAdded()">Add</button>
       </div>
     </div>-->
-    <div class="tile-body">
-        
-      <div class="btn-group mb-20">
-        <form role="form">
-            <div class="form-group">
-              <label for="exampleInputCategory">Product Category</label>
-              </div>
               
             
               
-                  <div class="tile-body form-validation">
+              <div class="form-group">
+                  <label for="exampleInputBrandName"> Product Category </label>
+                  </div>
                   <div class="col-sm-9">
-            <select name="f2" class="form-control mb-10" required>
-                <option >Select Product Category</option>
-                <option value="foo">Option 1</option>
-                <option value="bar">Option 2</option>
-              </select>
-              </div>
-</div>
-</form>
+                  <select name="f3" class="form-control mb-10"required>
+                      <option value="">Select Product Category</option>
+                      <option value="">Option 1</option>
+                      <option value="">Option 2</option>
+                      <option value="">Option 3</option>
+                    </div>
+                    </select>
+                 
+               </div>
+
              
 <div class="form-group">
                   <label for="exampleInputCategory">Invoice Available</label>
@@ -180,6 +202,39 @@
                     </select>
                  
                </div>
+               <div class="form-group">
+                  <label for="exampleInputModelName"> Model Name</label>
+                  </div>
+
+                  <div class="container">
+                      <div class="row">
+                          
+                          <div class="form-group col-sm-9">
+                              <div class="form-group has-feedback">
+                                  
+                                  <input type="text" class="form-control" id="inputValidation" placeholder="Search"/>
+                                  <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                              <label for="exampleInputModelName">Purchase Date</label>
+                              </div>
+
+                              <hr class="line-dashed line-full"/>
+
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Purchase Date</label>
+                <div class="col-sm-10" ng-controller="DatepickerDemoCtrl">
+                  <div class="input-group w-md">
+                    <input type="text" class="form-control" uib-datepicker-popup="{{format}}" ng-model="dt" is-open="opened" datepicker-options="dateOptions" ng-required="true" close-text="Close" />
+                    <span class="input-group-btn">
+                      <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+
                </div>
   </ion-content>
 </ion-view>

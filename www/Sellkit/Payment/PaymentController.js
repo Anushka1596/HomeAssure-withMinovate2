@@ -29,5 +29,6 @@ app.controller('PaymentCtrl', ['$scope', '$state', '$stateParams', '$ionicPopup'
     $scope.reset = function () {
       $scope.paymentDetails = {};
     }
+    
 
   }]);

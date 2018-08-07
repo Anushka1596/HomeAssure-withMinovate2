@@ -1,22 +1,52 @@
 <ion-view view-title="Payment" name="profile-view">
   <ion-header>
-    <ion-header-bar class="bar-calm" align-title="center">
+   <ion-header-bar class="bar-calm" align-title="center">
       <button class="button btn-calm" align="right" ng-click="backtokit()">
-        << </button>
-          <h1 class="title">Payment</h1>
+        </button>
+          <h1 class="title">Payments</h1>
     </ion-header-bar>
-    <ion-tabs class="tabs-stipped tabs-top tabs-dark">
-      <ion-tab title="Add Customer>>">
-      </ion-tab>
-      <ion-tab title="Add Product>>">
-      </ion-tab>
-      <ion-tab title="Kit Details>>">
-      </ion-tab>
-      <ion-tab class="tab-item-active" title="Payments">
-      </ion-tab>
-    </ion-tabs>
-  </ion-header>
-  <ion-content class="has-header padding has-subheader has-footer has-subfooter">
+    </ion-header>
+    <ion-content class="has-header padding has-subheader has-footer has-subfooter">
+
+  <div class="pagecontent">
+      <div class="row">
+        <uib-tabset class="tab-wizard" justified="true" ng-init="steps={step1:false, step2:false, step3:false, step4:true}">
+          <uib-tab active="steps.step1">
+            <uib-tab-heading>
+              Add Customer
+            </uib-tab-heading>
+          </uib-tab>
+
+          <uib-tab active="steps.step2" disable="step2.$invalid">
+
+            <uib-tab-heading>
+              Add Product
+            </uib-tab-heading>
+
+          </uib-tab>
+
+          <uib-tab active="steps.step3">
+
+            <uib-tab-heading>
+              Enter Kit Details
+            </uib-tab-heading>
+
+
+          </uib-tab>
+
+          <uib-tab active="steps.step4">
+
+            <uib-tab-heading>
+              Payment
+            </uib-tab-heading>
+          </uib-tab>
+
+
+
+        </uib-tabset>
+      </div>
+    </div>
+  
     <!--<form>
       <ion-list>
         <ion-item>
@@ -70,30 +100,29 @@
     <form role="form">
         <div class="form-group">
           <label for="exampleInputPayment">Payment Method</label>
-          
+          <div class="col-sm-9">
         
  
-        <select name="f2" class="form-control mb-10" ng-model="fc2" required>
+        <select name="f2" class="form-control mb-10">
             <option value="">Select Payment Mode</option>
             <option value="foo">Cash </option>
             <option value="bar">Card</option>
           </select>
           </div>
-          <div class="tile-body">
+          </div>
+          
+          <div class ="form-group">
+              <label for="exampleInputAmount">Amount</label>
+                <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+          </div>
 
-              <form role="form">
-                <div class="form-group">
-                  <label for="exampleInputAmount">Amount</label>
-                  <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
-                </div>
                 <div class="form-group">
                   <label for="exampleInputComment">Comment</label>
                   <input type="text" class="form-control" id="exampleInputComment" placeholder="Comment">
                 </div>
                
                 
-              </form>
-             </div>
+            
 
              <div class="form-group">
                 <label class="control-label">Image (optional)</label>
@@ -107,6 +136,8 @@
             <button type="submit" class="btn btn-rounded btn-success btn-sm" ng-click="reset()">Reset</button>
             
             <button type="submit" class="btn btn-rounded btn-success btn-sm" ng-click="submit()"> Submit</button>
+          </div>
           </form>
+        
 </ion-content>
 </ion-view>

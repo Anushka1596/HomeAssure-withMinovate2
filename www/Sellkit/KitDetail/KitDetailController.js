@@ -1,5 +1,6 @@
 app.controller('KitDetailCtrl', ['$scope', '$state', '$stateParams',
-  function ($scope, $state, $stateParams) {
+  function ($scope, $state, $stateParams) 
+  {
     $scope.customer = {};
     $scope.kitDetails = {};
     var customer = $stateParams.customer;
@@ -29,7 +30,10 @@ app.controller('KitDetailCtrl', ['$scope', '$state', '$stateParams',
     $scope.backtoProduct = function () {
       $state.go('app.AddProduct', { customer: customer, productList: productList, Kitdetail: $scope.kitDetails, payment: payment });
     };
-    $scope.reset = function () {
+
+    $scope.reset = function () 
+    {
       $scope.kitDetails = {};
     };
+    
   }]);

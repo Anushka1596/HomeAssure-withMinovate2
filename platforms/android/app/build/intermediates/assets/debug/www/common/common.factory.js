@@ -2,28 +2,33 @@ app.factory('HomeAssureFactory', ['$window', '$q', '$http', '$rootScope', '$stat
   function ($window, $q, $http, $rootScope, $state) {
 
     return {
-      /* Login: function (username, password) {
+       Login: function (username, password)
+        {
          var deferred = $q.defer();
          var promise = deferred.promise;
  
-         if (username == 'anu' && password == 'anu') {
+         if (username == 'anu' && password == 'anu') 
+         {
            deferred.resolve('Welcome ' + username + '!');
-         } else {
+         } else 
+         {
            deferred.reject('Wrong credentials.');
          }
-         promise.success = function (fn) {
+         promise.success = function (fn)
+          {
            promise.then(fn);
            return promise;
          }
-         promise.error = function (fn) {
+         promise.error = function (fn)
+          {
            promise.then(null, fn);
            return promise;
          }
          return promise;
-       }*/
+       }
 
 
-      Login: function (username, password) {
+      /*Login: function (username, password) {
         var deferred = $q.defer();
         $http({
           method: 'POST',
@@ -50,7 +55,7 @@ app.factory('HomeAssureFactory', ['$window', '$q', '$http', '$rootScope', '$stat
       forgotPassword: function (username) {
         var deferred = $q.defer();
 
-      }
+      }*/
 
 
     }

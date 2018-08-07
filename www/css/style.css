@@ -73,3 +73,8 @@ span.psw {
     background-color:#DEF5FF;
     margin: 1%;
 }
+label
+{
+  padding-left:6 px;
+  padding-top: 4 px;
+}
